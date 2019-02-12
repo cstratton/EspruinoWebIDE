@@ -90,7 +90,7 @@
           for (var i in items) {
             var port = items[i];
             // if autoconnect is set on this, just automatically connect, without displaying the window
-            if (port.autoconnect)
+            if (port.autoconnect || (port.type=="bluetooth"))
               return selectPortInternal(port.path);
 
             var icon = "icon-usb";
